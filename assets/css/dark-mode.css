@@ -1,0 +1,335 @@
+/* =============================================
+   MediBook — Dark Mode
+   Add <link rel="stylesheet" href="../assets/css/dark-mode.css">
+   to every page AFTER style.css
+   ============================================= */
+
+/* ── Dark Mode Toggle Button ── */
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+.theme-toggle:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+}
+
+/* ── Dark Mode Variables ── */
+[data-theme="dark"] {
+    --primary:        #2DD4BF;
+    --primary-dark:   #14B8A6;
+    --primary-light:  rgba(45,212,191,0.1);
+    --primary-mid:    rgba(45,212,191,0.08);
+    --accent:         #FBBF24;
+    --accent-light:   rgba(251,191,36,0.1);
+    --danger:         #F87171;
+    --success:        #34D399;
+    --info:           #60A5FA;
+    --warning:        #FBBF24;
+    --text-dark:      #F1F5F9;
+    --text-mid:       #94A3B8;
+    --text-light:     #64748B;
+    --bg:             #0F172A;
+    --bg-card:        #1E293B;
+    --border:         #334155;
+    --shadow-xs:      0 1px 3px rgba(0,0,0,0.3);
+    --shadow-sm:      0 2px 12px rgba(0,0,0,0.25);
+    --shadow-md:      0 8px 32px rgba(0,0,0,0.35);
+    --shadow-lg:      0 20px 60px rgba(0,0,0,0.45);
+    --shadow-card:    0 2px 8px rgba(0,0,0,0.25);
+}
+
+/* ── Body & Background ── */
+[data-theme="dark"] body {
+    background: var(--bg);
+    color: var(--text-dark);
+}
+
+/* ── Navbar ── */
+[data-theme="dark"] .navbar {
+    background: rgba(15,23,42,0.95);
+    border-bottom-color: var(--border);
+}
+[data-theme="dark"] .nav-links a {
+    color: var(--text-mid);
+}
+[data-theme="dark"] .nav-links a:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+/* ── Sidebar ── */
+[data-theme="dark"] .sidebar {
+    background: #1E293B;
+    border-right-color: var(--border);
+}
+[data-theme="dark"] .sidebar-header {
+    background: #1E293B;
+    border-bottom-color: var(--border);
+}
+[data-theme="dark"] .sidebar-link {
+    color: var(--text-mid);
+}
+[data-theme="dark"] .sidebar-link:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+[data-theme="dark"] .sidebar-link.active {
+    background: var(--primary);
+    color: #0F172A;
+}
+[data-theme="dark"] .sidebar-user {
+    border-top-color: var(--border);
+}
+[data-theme="dark"] .sidebar-user-info .name {
+    color: var(--text-dark);
+}
+[data-theme="dark"] .nav-section-title {
+    color: var(--text-light);
+}
+
+/* ── Topbar ── */
+[data-theme="dark"] .topbar {
+    background: #1E293B;
+    border-bottom-color: var(--border);
+}
+[data-theme="dark"] .topbar-title {
+    color: var(--text-dark);
+}
+[data-theme="dark"] .notif-btn {
+    background: #0F172A;
+    border-color: var(--border);
+    color: var(--text-mid);
+}
+[data-theme="dark"] .notif-btn:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* ── Cards ── */
+[data-theme="dark"] .card {
+    background: #1E293B;
+    border-color: var(--border);
+}
+[data-theme="dark"] .card-header {
+    background: #1E293B;
+    border-bottom-color: var(--border);
+}
+[data-theme="dark"] .card-header h3 {
+    color: var(--text-dark);
+}
+
+/* ── Stat Cards ── */
+[data-theme="dark"] .stat-card {
+    background: #1E293B;
+    border-color: var(--border);
+}
+[data-theme="dark"] .stat-num {
+    color: var(--text-dark);
+}
+[data-theme="dark"] .stat-card-icon.teal   { background: rgba(45,212,191,0.12); }
+[data-theme="dark"] .stat-card-icon.amber  { background: rgba(251,191,36,0.12); }
+[data-theme="dark"] .stat-card-icon.green  { background: rgba(52,211,153,0.12); }
+[data-theme="dark"] .stat-card-icon.blue   { background: rgba(96,165,250,0.12); }
+[data-theme="dark"] .stat-card-icon.red    { background: rgba(248,113,113,0.12); }
+[data-theme="dark"] .stat-card-icon.purple { background: rgba(167,139,250,0.12); }
+
+/* ── Tables ── */
+[data-theme="dark"] thead th {
+    background: #0F172A;
+    color: var(--text-light);
+    border-bottom-color: var(--border);
+}
+[data-theme="dark"] tbody td {
+    border-bottom-color: var(--border);
+    color: var(--text-dark);
+}
+[data-theme="dark"] tbody tr:hover td {
+    background: rgba(255,255,255,0.03);
+}
+
+/* ── Forms ── */
+[data-theme="dark"] .form-control {
+    background: #0F172A;
+    border-color: var(--border);
+    color: var(--text-dark);
+}
+[data-theme="dark"] .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(45,212,191,0.12);
+}
+[data-theme="dark"] .form-control::placeholder {
+    color: var(--text-light);
+}
+[data-theme="dark"] .form-group label {
+    color: var(--text-dark);
+}
+
+/* ── Buttons ── */
+[data-theme="dark"] .btn-ghost {
+    background: #0F172A;
+    border-color: var(--border);
+    color: var(--text-mid);
+}
+[data-theme="dark"] .btn-ghost:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+[data-theme="dark"] .btn-outline {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+[data-theme="dark"] .btn-outline:hover {
+    background: var(--primary);
+    color: #0F172A;
+}
+
+/* ── Alerts ── */
+[data-theme="dark"] .alert-success { background: rgba(52,211,153,0.1);  border-color: rgba(52,211,153,0.3);  color: #34D399; }
+[data-theme="dark"] .alert-danger  { background: rgba(248,113,113,0.1); border-color: rgba(248,113,113,0.3); color: #F87171; }
+[data-theme="dark"] .alert-info    { background: rgba(96,165,250,0.1);  border-color: rgba(96,165,250,0.3);  color: #60A5FA; }
+[data-theme="dark"] .alert-warning { background: rgba(251,191,36,0.1);  border-color: rgba(251,191,36,0.3);  color: #FBBF24; }
+
+/* ── Badges ── */
+[data-theme="dark"] .badge-success   { background: rgba(52,211,153,0.15);  color: #34D399; }
+[data-theme="dark"] .badge-warning   { background: rgba(251,191,36,0.15);  color: #FBBF24; }
+[data-theme="dark"] .badge-danger    { background: rgba(248,113,113,0.15); color: #F87171; }
+[data-theme="dark"] .badge-info      { background: rgba(96,165,250,0.15);  color: #60A5FA; }
+[data-theme="dark"] .badge-secondary { background: rgba(100,116,139,0.2);  color: #94A3B8; }
+
+/* ── Hero Section ── */
+[data-theme="dark"] .hero {
+    background: linear-gradient(150deg, #0F172A 0%, #1E293B 50%, #0F2027 100%);
+}
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .hero-card-num { color: var(--text-dark); }
+[data-theme="dark"] .hero-floating-card {
+    background: #1E293B;
+    border-color: var(--border);
+}
+
+/* ── Welcome Banner stays colorful ── */
+[data-theme="dark"] .welcome-banner h2,
+[data-theme="dark"] .welcome-banner p { color: white; }
+
+/* ── Divider ── */
+[data-theme="dark"] .divider { border-top-color: var(--border); }
+
+/* ── Empty State ── */
+[data-theme="dark"] .empty-state { color: var(--text-light); }
+
+/* ── Doctor Cards (landing) ── */
+[data-theme="dark"] .doctor-card {
+    background: #1E293B;
+    border-color: var(--border);
+}
+[data-theme="dark"] .doctor-card h3 { color: var(--text-dark); }
+[data-theme="dark"] .doctor-meta    { border-color: var(--border); }
+[data-theme="dark"] .doctor-meta-item { border-right-color: var(--border); }
+[data-theme="dark"] .meta-val       { color: var(--text-dark); }
+
+/* ── Step Cards ── */
+[data-theme="dark"] .step-card {
+    background: #1E293B;
+    border-color: var(--border);
+}
+[data-theme="dark"] .step-icon { background: rgba(45,212,191,0.1); }
+
+/* ── Feature Cards ── */
+[data-theme="dark"] .feature-card {
+    background: #1E293B;
+    border-color: var(--border);
+}
+[data-theme="dark"] .feature-card h4 { color: var(--text-dark); }
+[data-theme="dark"] .feature-icon    { background: rgba(45,212,191,0.1); }
+
+/* ── Testimonials ── */
+[data-theme="dark"] .testimonial-card {
+    background: #1E293B;
+    border-color: var(--border);
+}
+[data-theme="dark"] .testimonial-text { color: var(--text-mid); }
+
+/* ── Spec Pills ── */
+[data-theme="dark"] .spec-pill {
+    background: #1E293B;
+    border-color: var(--border);
+}
+[data-theme="dark"] .spec-pill .name { color: var(--text-dark); }
+[data-theme="dark"] .spec-pill:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+}
+
+/* ── Search Bar ── */
+[data-theme="dark"] .search-bar {
+    background: #1E293B;
+    border-color: var(--border);
+}
+[data-theme="dark"] .search-bar input {
+    background: transparent;
+    color: var(--text-dark);
+}
+
+/* ── Stats Counter ── */
+[data-theme="dark"] .counter-item    { background: #1E293B; }
+[data-theme="dark"] .counter-item:hover { background: rgba(45,212,191,0.08); }
+[data-theme="dark"] .counter-label   { color: var(--text-mid); }
+
+/* ── Auth Pages ── */
+[data-theme="dark"] .auth-right {
+    background: #1E293B;
+}
+[data-theme="dark"] .auth-box h2 { color: var(--text-dark); }
+[data-theme="dark"] .auth-box > p { color: var(--text-mid); }
+
+/* ── Footer ── */
+[data-theme="dark"] .footer { background: #020617; }
+
+/* ── Rx Cards ── */
+[data-theme="dark"] .rx-card {
+    background: #1E293B;
+    border-color: var(--border);
+}
+
+/* ── Slots ── */
+[data-theme="dark"] .slot-btn {
+    background: #0F172A;
+    border-color: var(--border);
+    color: var(--text-mid);
+}
+[data-theme="dark"] .slot-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-light);
+}
+[data-theme="dark"] .slot-btn.selected {
+    background: var(--primary);
+    color: #0F172A;
+    border-color: var(--primary);
+}
+
+/* ── Scrollbar (dark) ── */
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: #334155;
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* ── Transition for smooth switch ── */
+body, .sidebar, .card, .stat-card, .topbar, .navbar,
+.form-control, .btn, .badge, .alert, .table-wrap, table {
+    transition: background-color 0.25s, border-color 0.25s, color 0.15s;
+}
