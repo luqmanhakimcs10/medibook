@@ -1,2 +1,1 @@
-# medibook
-an online clinic appointment system
+# Medibook – Online Appointment System
